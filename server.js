@@ -1,4 +1,3 @@
-require('./config/db');
 const express = require('express');
 const app = express();
 const path = require('path');
@@ -7,6 +6,8 @@ const cors = require('cors');
 const fileRoute = require('./routes/fileRoute');
 const showFileRoute = require('./routes/showFile');
 const downloadFileRoute = require('./routes/downloadFile');
+const db = require('./config/db');
+db();
 
 //Cors
 const corsOptions = {
